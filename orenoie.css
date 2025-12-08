@@ -1,1 +1,65 @@
+/* 低クオリティのテーマ：標準フォント、無装飾、地味な色 */
 
+body {
+    font-family: serif; /* ゴシック体ではなく、セリフ体（明朝系）を使用 */
+    background-color: #f0f0f0; /* 薄いグレー */
+    color: #000000;
+    margin: 40px;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #cccccc; /* 地味なグレーの背景 */
+    padding: 10px;
+    border: 1px solid #666666; /* 太めの枠線 */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #990000; /* 意図的に目立ちすぎない赤 */
+}
+
+main {
+    width: 800px; /* 固定幅 */
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px dashed #0000ff; /* 青の点線 */
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+section h2 {
+    color: #008000; /* 標準的な緑 */
+    border-bottom: 1px solid #008000;
+    padding-bottom: 5px;
+}
+
+/* リストの装飾を無くすか、標準のままにする */
+ul {
+    list-style-type: square; /* 四角の記号 */
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+dl dt {
+    font-weight: bold;
+    color: #ff8c00; /* ダサめのオレンジ */
+}
+
+/* リンクを青と下線のみにする */
+a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: right;
+    font-size: 0.8em;
+    color: #333333;
+    padding-top: 10px;
+    border-top: 1px dotted #333333;
+}
