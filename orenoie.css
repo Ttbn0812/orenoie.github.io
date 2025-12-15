@@ -1,112 +1,129 @@
-/* 華やかさUPのテーマ：ボックスシャドウ、マイルドな色使い、視覚的な区切り */
+/* ポップ＆モダンなデザインテーマ */
 
+/* Google Fontsなど外部フォントを使うとより華やかになりますが、今回は標準的なフォントで最大限に装飾します */
 body {
-    font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; /* 見やすいフォントに変更 */
-    background-color: #eef1f6; /* ごく薄いブルーグレーの背景 */
+    font-family: 'Avenir', 'Helvetica Neue', 'Arial', sans-serif;
+    background-color: #f4f7f9; /* 非常に明るい空色 */
     color: #333;
     margin: 0;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
+/* ヒーローセクション (ヘッダー) */
 header {
-    background-color: #3c98d0; /* スカイブルー */
+    background: linear-gradient(135deg, #1e90ff, #00bfff); /* グラデーション背景 */
     color: white;
-    padding: 25px 20px;
+    padding: 60px 20px 40px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* 強い影 */
+    margin-bottom: 30px;
+    border-bottom-left-radius: 30px; /* 角を丸く */
+    border-bottom-right-radius: 30px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin: 0;
-    letter-spacing: 1px;
+    text-shadow: 2px 2px #ff4500; /* 目を引く影 */
+    letter-spacing: 3px;
 }
 
 header p {
-    margin-top: 5px;
-    opacity: 0.8;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
+/* メインコンテンツエリア */
 main {
-    max-width: 900px; /* 固定幅ではなく最大幅を設定 */
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: 0 auto 50px;
     padding: 0 20px;
 }
 
+/* セクションのスタイル */
 section {
     background-color: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 8px; /* 角を丸く */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* 影を強調 */
+    padding: 30px 40px;
+    margin-bottom: 40px;
+    border-radius: 15px; /* 角をしっかり丸く */
+    transition: transform 0.3s ease-in-out;
+    border: 3px solid #ffcc00; /* 明るい黄色で囲む */
+}
+
+section:hover {
+    transform: translateY(-5px); /* ホバーで少し浮き上がらせる */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 section h2 {
-    color: #e56730; /* 暖色系のオレンジ */
-    border-left: 5px solid #ffcc00; /* 左側にアクセントライン */
-    padding-left: 10px;
-    margin-bottom: 20px;
-    font-size: 1.6em;
+    color: #d81b60; /* マゼンタ系の目立つ色 */
+    border-bottom: 4px dotted #ffcc00; /* 波線で区切りをポップに */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2em;
 }
 
-/* リストの見栄え改善 */
+/* リストアイテム */
 ul, dl {
-    margin-left: 0;
     padding-left: 20px;
 }
 
 ul li {
-    list-style-type: '👉 '; /* 矢印絵文字で華やかに */
-    margin-bottom: 5px;
+    list-style-type: '🌟 '; /* 星の絵文字 */
+    margin-bottom: 8px;
+    font-size: 1.1em;
 }
 
 dl dt {
     font-weight: bold;
-    color: #3c98d0;
-    margin-top: 10px;
+    color: #1e90ff; /* ヘッダーと合わせた青 */
+    margin-top: 15px;
+    border-left: 5px solid #ffcc00;
+    padding-left: 10px;
 }
 
-dd {
-    margin-left: 15px;
-}
-
-/* グルメ情報ボックスの装飾 */
+/* ★★★ グルメ情報ボックスの装飾を最優先で目立たせる ★★★ */
 .gourmet-info {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #fffbe0; /* クリーム色 */
-    border: 1px dashed #e56730;
-    border-radius: 5px;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ff4500; /* ショッキングな赤オレンジ */
+    color: white;
+    border-radius: 10px;
+    border: 5px dashed white; /* 白の破線でさらに強調 */
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.6);
+    text-align: center;
 }
 .gourmet-info h3 {
-    color: #e56730;
-    border-bottom: 1px dotted #e56730;
-    padding-bottom: 5px;
+    color: #ffcc00; /* 黄色で見出しを強調 */
+    font-size: 1.5em;
+    border: none;
     margin-top: 0;
+    text-shadow: 1px 1px #000;
+}
+.gourmet-info p {
+    font-size: 1.1em;
 }
 
 
-/* 区切り線を非表示またはシンプルに */
-hr {
-    display: none; /* ボックスシャドウで区切られているため非表示 */
-}
-
+/* リンク */
 a {
-    color: #007bff;
+    color: #1e90ff;
     text-decoration: none;
-    border-bottom: 1px dotted #007bff;
-    transition: color 0.3s;
+    font-weight: bold;
+    border-bottom: 2px solid #1e90ff;
+    transition: background-color 0.3s;
 }
 
 a:hover {
-    color: #0056b3;
+    background-color: #ffe0b2; /* ホバーで淡いオレンジの背景色 */
 }
 
+/* フッター */
 footer {
     background-color: #333;
-    color: #ddd;
+    color: #f4f7f9;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    padding: 20px 0;
     font-size: 0.9em;
 }
